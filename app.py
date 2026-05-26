@@ -224,7 +224,7 @@ YELLOW = '#ffe040'
 # ══════════════════════════════════════════════════════
 @st.cache_data
 def load_data():
-    df = pd.read_csv('data/final_electricity_dataset.csv', index_col=0, parse_dates=True)
+    df = pd.read_csv('final_electricity_dataset.csv', index_col=0, parse_dates=True)
     df.index = pd.to_datetime(df.index)
     df = df.sort_index()
     return df
